@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,Verdana,"Trebuchet MS";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.429;
+  color: $black;
+  background-color: $white;
+}
+
+.layout-container {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  max-width: $site-max-width;
+  margin: 0 auto;
+  background-color: lightblue;
+
+  @include tablet {
+    background-color: lightcoral;
+  }
+
+  @include phone {
+    background-color: lightseagreen;
+  }
+}
+
+.main-container {
+  flex: 1;
+}

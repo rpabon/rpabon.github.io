@@ -1,0 +1,32 @@
+.header-container {
+  flex: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  z-index: 1;
+  background-color: $blue;
+  box-shadow: 0 2px 5px rgba(#000, 0.26);
+}
+
+.logo-block {
+  flex: none;
+  color: $white;
+  border: 1px solid $white;
+  padding: 0 15px;
+
+  & > .logoimage {
+    border-radius: 16px;
+    background-color: $white;
+    padding: 2px;
+  }
+}
+
+.header-buttons {
+  display: flex;
+  flex: 0 0 50%;
+  border: 1px solid $white;
+
+  & > .button-block.-header {
+    flex: 1;
+  }
+}
