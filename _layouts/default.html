@@ -2,22 +2,18 @@
 <html>
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
     {% include meta.html %}
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300,700,400' rel='stylesheet' type='text/css'>
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
     <div class="layout-container">
+        {% include html/mobile-menu.html %}
         {% include html/header.html %}
+        {% include html/title-block.html %}
 
         <div id="main" role="main" class="main-container">
           {{ content }}
@@ -26,7 +22,7 @@
         {% include html/footer.html %}
     </div>
 
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/main.js"></script>
     {% include analytics.html %}
   </body>
 </html>

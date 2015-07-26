@@ -1,0 +1,15 @@
+.footer-container {
+  @include z-depth-1;
+  flex: none;
+  display: flex;
+  flex-flow: row nowrap;
+
+  & > .footerleft,
+  & > .footerright {
+    flex: 1 1;
+  }
+
+  & > .footerright {
+    text-align: right;
+  }
+}

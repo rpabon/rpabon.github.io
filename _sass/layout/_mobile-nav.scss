@@ -1,0 +1,10 @@
+.mobile-navigation {
+  @include z-depth-2;
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 10;
+  background-color: lightgreen;
+  width: 240px;
+}

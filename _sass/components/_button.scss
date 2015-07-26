@@ -1,0 +1,26 @@
+.button-element {
+  background: 0 0;
+  border: none;
+  border-radius: 2px;
+  color: $black;
+  display: block;
+  position: relative;
+  height: 36px;
+  min-width: 64px;
+  padding: 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  overflow: hidden;
+  will-change: box-shadow,transform;
+  transition: box-shadow .2s cubic-bezier(.4,0,1,1), background-color .2s cubic-bezier(.4,0,.2,1), color .2s cubic-bezier(.4,0,.2,1);
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: 36px;
+  vertical-align: middle;
+
+  &.-header {
+
+  }
+}

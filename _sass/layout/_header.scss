@@ -1,11 +1,11 @@
 .header-container {
+  @include z-depth-1;
   flex: none;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   z-index: 1;
   background-color: $blue;
-  box-shadow: 0 2px 5px rgba(#000, 0.26);
 }
 
 .logo-block {
@@ -26,7 +26,7 @@
   flex: 0 0 50%;
   border: 1px solid $white;
 
-  & > .button-block.-header {
+  & > .button-element {
     flex: 1;
   }
 }
