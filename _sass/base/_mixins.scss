@@ -25,3 +25,8 @@
 @mixin z-depth-5 {
   box-shadow: 0 27px 24px 0 rgba($black, 0.2), 0 40px 77px 0 rgba($black, 0.22);
 }
+
+@mixin content-container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
