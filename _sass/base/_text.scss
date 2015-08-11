@@ -19,10 +19,25 @@
   line-height: 24px;
 }
 
-._bold {
+@mixin bold-text {
   font-weight: 600;
 }
 
-._light {
+@mixin light-text {
   font-weight: 300;
+}
+
+._bold-text {
+  @include bold-text;
+}
+
+._light-text {
+  @include light-text;
+}
+
+.headline-article {
+  @include headlineBig;
+  @include bold-text;
+  color: $lightBlue;
+  margin-bottom: 1.5em;
 }

@@ -1,16 +1,13 @@
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-}
-
 body {
   @include paragraph;
   position: relative;
   font-family: 'Roboto', sans-serif;
-  color: $black;
+  color: $text-color-default;
+  background-color: $body-background-color;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
 }
