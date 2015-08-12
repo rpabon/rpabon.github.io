@@ -4,6 +4,11 @@
   font-weight: 400;
 }
 
+@mixin paragraph-small {
+  font-size: 16px;
+  line-height: 26px;
+}
+
 @mixin headlineBig {
   font-size: 34px;
   line-height: 40px;
@@ -38,6 +43,6 @@
 .headline-article {
   @include headlineBig;
   @include bold-text;
-  color: $lightBlue;
+  color: $blue;
   margin-bottom: 1.5em;
 }

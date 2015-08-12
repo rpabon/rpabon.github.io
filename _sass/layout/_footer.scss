@@ -1,0 +1,31 @@
+.footer {
+  flex: 0 0 145px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: $grey-dark;
+}
+
+.footer__info,
+.footer__icons {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.footer__info {
+  color: #fff;
+  flex: 1;
+  flex-direction: column;
+}
+
+.footer__icons {
+  flex: 1;
+  flex-direction: row;
+}
+
+
+.footer__icon {
+  margin: 0 8px;
+}
