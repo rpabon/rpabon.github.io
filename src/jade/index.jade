@@ -1,6 +1,23 @@
 extends templates/homepage
 
 block content
-  include blocks/header
-  include blocks/body
-  include blocks/footer
+
+    header
+        .container.navbar-header
+            a(href='/').logo
+                img(src='img/logo.png', alt='logo.png', width='32')
+                h5 rpabon
+
+    main
+        section.clouds
+        section.info
+        section.street
+            .bushes
+        #megaman
+
+    footer
+        .container
+            p Ricardo Pabón
+            p.footer__date
+            p Check out this website in
+                a(href='https://github.com/rpabon/static-website') githu

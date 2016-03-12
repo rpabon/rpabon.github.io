@@ -1,0 +1,128 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  height: 100%; }
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #0088f0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0088f0), to(#f2ede4));
+  background: -webkit-linear-gradient(top, #0088f0, #f2ede4);
+  background: -o-linear-gradient(top, #0088f0, #f2ede4); }
+
+header, footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+  padding: 10px 0; }
+
+main {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+#megaman,
+.info {
+  position: absolute; }
+
+.clouds {
+  background: url(../img/clouds@2x.png) repeat-x top center;
+  height: 120px; }
+
+.bushes {
+  background: url(../img/bushes@2x.png) repeat-x bottom center;
+  height: 200px; }
+
+.street {
+  background: url(../img/street@2x.png) repeat-x bottom center;
+  height: 200px; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto; }
+
+header {
+  background-color: #275B8F;
+  z-index: 1; }
+
+.logo {
+  color: #f2ede4; }
+  .logo > img {
+    border-radius: 16px;
+    background-color: #f2ede4;
+    padding: 2px; }
+
+footer {
+  color: #f2ede4;
+  background-color: #182128; }
+
+/*# sourceMappingURL=main.css.map */
