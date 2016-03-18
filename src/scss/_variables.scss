@@ -1,8 +1,13 @@
-$white: #f2ede4;
-$black: #182128;
-$blue: #0088f0;
-$green: #5DA586;
+$white   : #F2EDE4;
+$black   : #182128;
+$blue    : #0075E5;
+$green   : #5DA586;
 $darkblue: #275B8F;
 
 //overrides
 $font-family-base: 'Press Start 2P', cursive;
+
+//mixins
+@mixin pan($duration: 20s) {
+    animation: pan $duration linear infinite;
+}

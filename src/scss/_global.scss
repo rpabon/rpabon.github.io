@@ -8,9 +8,8 @@ body {
     background-color: $blue;
     background: -webkit-gradient(linear, left top, left bottom, from($blue), to($white));
     background: -webkit-linear-gradient(top, $blue, $white);
-    background: -moz-linear-gradient(top, $blue, $white);
-    background: -ms-linear-gradient(top, $blue, $white);
-    background: -o-linear-gradient(top, $blue, $white);
+    background:    -moz-linear-gradient(top, $blue, $white);
+    //background: -ms-linear-gradient(top, $blue, $white);
 }
 
 header, footer {
@@ -19,32 +18,67 @@ header, footer {
 }
 
 main {
-    position: relative;
     display: flex;
-    flex: 1 0 auto;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
-}
-
-#megaman,
-.info { position: absolute; }
-
-.clouds {
-    background: url(../img/clouds@2x.png) repeat-x top center;
-    height: 120px;
-}
-
-.bushes {
-     background: url(../img/bushes@2x.png) repeat-x bottom center;
-     height: 200px;
- }
-
-.street {
-    background: url(../img/street@2x.png) repeat-x bottom center;
-    height: 200px;
+    flex: 1;
+    overflow: hidden;
 }
 
 .container {
     max-width: 960px;
     margin: 0 auto;
+}
+
+#megaman,
+.info { position: absolute; }
+
+.bg-element {
+    background: transparent none repeat-x top center;
+    width: 3000px;
+    &.pause { animation-play-state: paused; }
+}
+
+.clouds {
+    flex: none;
+    background-image: url(../img/clouds@2x.png);
+    height: 120px;
+    @include pan(20s);
+}
+
+.ground {
+    position: relative;
+    flex: 1;
+    height: 340px;
+    & > .bg-element { position: absolute; left: 0; }
+}
+
+.street, .front-lights { bottom: 0; }
+
+.street {
+    background-image: url(../img/street@2x.png);
+    height: 282px;
+    z-index: 200;
+    @include pan(20s);
+}
+
+.bushes {
+     bottom: 94px;
+     height: 47px;
+     background-image: url(../img/bushes@2x.png);
+     z-index: 100;
+     @include pan(25s);
+ }
+
+.front-lights {
+    height: 340px;
+    z-index: 300;
+    background-image: url(../img/front-lights@2x.png);
+    @include pan(15s);
+}
+
+@keyframes pan {
+    from { transform: translate3d(      0, 0, 0); }
+    to   { transform: translate3d(-1000px, 0, 0); }
 }
