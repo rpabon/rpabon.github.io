@@ -189,6 +189,7 @@ main {
   height: 340px;
   z-index: 300;
   background-image: url(../img/front-lights@2x.png);
+  pointer-events: none;
   -webkit-animation: pan 15s linear infinite;
           animation: pan 15s linear infinite; }
 

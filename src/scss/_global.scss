@@ -111,6 +111,7 @@ main {
     height: 340px;
     z-index: 300;
     background-image: url(../img/front-lights@2x.png);
+    pointer-events: none;
     @include pan(15s);
 }
 
