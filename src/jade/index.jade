@@ -3,23 +3,31 @@ extends templates/homepage
 block content
 
     header
-        .container.navbar-header
+        .header__container.container
             a(href='/').logo
-                img(src='img/logo.png', alt='logo.png', width='32')
-                h5 rpabon
+                img(src='img/logo.png', alt='logo.png', width='32', height='32')
+            .header__buttons
+                a(href='https://github.com/rpabon')
+                    img(src='img/github@2x.png', alt='github.png', width='32', height='32')
+                a(href='http://www.linkedin.com/in/rpabon257')
+                    img(src='img/linkedin@2x.png', alt='linkedin.png', width='32', height='32')
+                a(href='http://stackoverflow.com/users/1350833/rpabon')
+                    img(src='img/stackoverflow@2x.png', alt='stackoverflow.png', width='32', height='32')
 
     main
-        section.clouds.bg-element.pause
+        section.clouds.bg-element.paused
         section.info
         section.ground
-            .street.bg-element.pause
-            .bushes.bg-element.pause
-            .front-lights.bg-element.pause
+            .street.bg-element.paused
+            .bushes.bg-element.paused
+            .front-lights.bg-element.paused
         #megaman
 
     footer
-        .container
-            p Ricardo Pabón
-            p.footer__date
-            p Check out this website in
-                a(href='https://github.com/rpabon/static-website') githu
+        .footer__container.container
+            p
+                span Ricardo Pabón
+                br
+                span.footer__date
+            p Check out this website in&nbsp;
+                a(href='https://github.com/rpabon/static-website') github

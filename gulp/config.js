@@ -19,7 +19,8 @@ var config = {
     },
     js: {
       src: basePaths.src + '/js/*.js',
-      srcAll: basePaths.src + '/js/**/*.js',
+      srcAll: basePaths.src + '/js/**/*.{js,jsx}',
+      bundleFile: basePaths.src + '/js/bundle.js',
       dest: basePaths.dest + '/js'
     },
     img: {

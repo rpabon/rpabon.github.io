@@ -58,6 +58,9 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  line-height: 2em;
   background-color: #0075E5;
   background: -webkit-gradient(linear, left top, left bottom, from(#0075E5), to(#F2EDE4));
   background: -webkit-linear-gradient(top, #0075E5, #F2EDE4);
@@ -67,8 +70,47 @@ header, footer {
   -webkit-box-flex: 0;
   -webkit-flex: none;
       -ms-flex: none;
-          flex: none;
-  padding: 10px 0; }
+          flex: none; }
+
+.header__container,
+.footer__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+
+.header__buttons > a {
+  display: inline-block;
+  margin: 0 10px; }
+  .header__buttons > a:first-child {
+    margin-left: 0; }
+  .header__buttons > a:last-child {
+    margin-right: 0; }
+
+header {
+  background-color: #275B8F;
+  z-index: 100; }
+
+.logo {
+  color: #F2EDE4; }
+  .logo > img {
+    border-radius: 50%;
+    background-color: #F2EDE4;
+    padding: 2px; }
+
+footer {
+  color: #F2EDE4;
+  background-color: #182128; }
 
 main {
   display: -webkit-box;
@@ -93,16 +135,14 @@ main {
 
 .container {
   max-width: 960px;
-  margin: 0 auto; }
-
-#megaman,
-.info {
-  position: absolute; }
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px; }
 
 .bg-element {
   background: transparent none repeat-x top center;
   width: 3000px; }
-  .bg-element.pause {
+  .bg-element.paused {
     -webkit-animation-play-state: paused;
             animation-play-state: paused; }
 
@@ -168,19 +208,66 @@ main {
     -webkit-transform: translate3d(-1000px, 0, 0);
             transform: translate3d(-1000px, 0, 0); } }
 
-header {
-  background-color: #275B8F;
-  z-index: 1; }
+/* Megaman intro */
+@-webkit-keyframes intro {
+  from {
+    background-position: 0px -140px; }
+  to {
+    background-position: 0px -980px; } }
+@keyframes intro {
+  from {
+    background-position: 0px -140px; }
+  to {
+    background-position: 0px -980px; } }
 
-.logo {
-  color: #F2EDE4; }
-  .logo > img {
-    border-radius: 16px;
-    background-color: #F2EDE4;
-    padding: 2px; }
+/* Megaman running */
+@-webkit-keyframes run {
+  from {
+    background-position: -280px 0; }
+  to {
+    background-position: -280px -1400px; } }
+@keyframes run {
+  from {
+    background-position: -280px 0; }
+  to {
+    background-position: -280px -1400px; } }
 
-footer {
-  color: #F2EDE4;
-  background-color: #182128; }
+/* Megaman idle */
+@-webkit-keyframes idle {
+  from {
+    background-position: -140px 0; }
+  to {
+    background-position: -140px -700px; } }
+@keyframes idle {
+  from {
+    background-position: -140px 0; }
+  to {
+    background-position: -140px -700px; } }
+
+#megaman {
+  position: absolute;
+  background-image: url("../img/megaman-sprites@2x.png");
+  cursor: url("../img/cursor_grab_open.png") 23 23, auto;
+  width: 140px;
+  height: 140px;
+  top: -40px;
+  left: 5em;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  z-index: 200; }
+  #megaman.intro {
+    -webkit-animation: intro 0.8s steps(6);
+            animation: intro 0.8s steps(6); }
+  #megaman.run {
+    -webkit-animation: run 0.7s steps(10) infinite;
+            animation: run 0.7s steps(10) infinite; }
+  #megaman.idle {
+    -webkit-animation: idle 1s steps(5) infinite;
+            animation: idle 1s steps(5) infinite; }
+  #megaman.falling {
+    background-position: 700px -560px; }
+  #megaman.grabbed {
+    cursor: url("../img/cursor_grab_closed.png") 23 23, auto;
+    background-position: 700px -420px; }
 
 /*# sourceMappingURL=main.css.map */

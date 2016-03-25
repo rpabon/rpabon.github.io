@@ -5,6 +5,9 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    line-height: 2em;
     background-color: $blue;
     background: -webkit-gradient(linear, left top, left bottom, from($blue), to($white));
     background: -webkit-linear-gradient(top, $blue, $white);
@@ -12,10 +15,44 @@ body {
     //background: -ms-linear-gradient(top, $blue, $white);
 }
 
-header, footer {
-    flex: none;
-    padding: 10px 0;
+header, footer { flex: none; }
+
+.header__container,
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
+.header__buttons > a {
+    display: inline-block;
+    margin: 0 10px;
+    &:first-child{ margin-left: 0;  }
+    &:last-child { margin-right: 0; }
+}
+
+header {
+    background-color: $darkblue;
+    z-index: 100;
+}
+
+.logo {
+    color: $white;
+
+    & > img {
+        border-radius: 50%;
+        background-color: $white;
+        padding: 2px;
+    }
+}
+
+footer {
+    color: $white;
+    background-color: $black;
+}
+
 
 main {
     display: flex;
@@ -29,15 +66,14 @@ main {
 .container {
     max-width: 960px;
     margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-
-#megaman,
-.info { position: absolute; }
 
 .bg-element {
     background: transparent none repeat-x top center;
     width: 3000px;
-    &.pause { animation-play-state: paused; }
+    &.paused { animation-play-state: paused; }
 }
 
 .clouds {
@@ -81,4 +117,44 @@ main {
 @keyframes pan {
     from { transform: translate3d(      0, 0, 0); }
     to   { transform: translate3d(-1000px, 0, 0); }
+}
+
+/* Megaman intro */
+@keyframes intro {
+    from { background-position: 0px -140px; }
+    to   { background-position: 0px -980px; }
+}
+
+/* Megaman running */
+@keyframes run {
+    from { background-position: -280px 0;       }
+    to   { background-position: -280px -1400px; }
+}
+
+/* Megaman idle */
+@keyframes idle {
+    from { background-position: -140px 0;      }
+    to   { background-position: -140px -700px; }
+}
+
+#megaman {
+    position: absolute;
+    background-image: url('../img/megaman-sprites@2x.png');
+    cursor: url('../img/cursor_grab_open.png') 23 23, auto;
+    width: 140px;
+    height: 140px;
+    top: -40px;
+    left: 5em;
+    transform: translate3d(0, 0, 0);
+    z-index: 200;
+
+    &.intro   { animation: intro 0.8s steps(6)          ; }
+    &.run     { animation: run   0.7s steps(10) infinite; }
+    &.idle    { animation: idle    1s steps(5)  infinite; }
+    &.falling { background-position: 700px -560px;        }
+
+    &.grabbed {
+        cursor: url('../img/cursor_grab_closed.png') 23 23, auto;
+        background-position: 700px -420px;
+    }
 }
