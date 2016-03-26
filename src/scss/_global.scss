@@ -8,6 +8,7 @@ body {
     font-family: 'Press Start 2P', cursive;
     font-size: 10px;
     line-height: 2em;
+    overflow: hidden;
     background-color: $blue;
     background: -webkit-gradient(linear, left top, left bottom, from($blue), to($white));
     background: -webkit-linear-gradient(top, $blue, $white);
@@ -35,7 +36,7 @@ header, footer { flex: none; }
 
 header {
     background-color: $darkblue;
-    z-index: 100;
+    z-index: 300;
 }
 
 .logo {
@@ -144,7 +145,7 @@ main {
     cursor: url('../img/cursor_grab_open.png') 23 23, auto;
     width: 140px;
     height: 140px;
-    top: -40px;
+    bottom: -110%;
     left: 5em;
     transform: translate3d(0, 0, 0);
     z-index: 200;

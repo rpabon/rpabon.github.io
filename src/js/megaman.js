@@ -1,14 +1,17 @@
 $(function() {
+    var $window = $(window);
     var megaman = $('#megaman');
-    var megamanHeight = megaman.outerHeight();
     var bgElements = $('.bg-element');
-    var bannerHeight = $('main').outerHeight();
-    var streetHeight = $('.street').outerHeight() - 185;
 
-    $(window).on('load', function() {
+    $window.on('load resize', _.debounce(function() {
+        var windowHeight = $window.height();
+
+        bgElements.addClass('paused');
 
         megaman
-            .animate({top: bannerHeight - megamanHeight - streetHeight}, 700, 'easeInCirc', function() {
+            .removeClass()
+            .css('bottom', windowHeight - megaman.height())
+            .animate({bottom: '138px'}, 700, 'easeInCirc', function() {
                 megaman.addClass('intro');
             })
             .on('animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd', function() {
@@ -33,7 +36,7 @@ $(function() {
                         });
                 }
         });
-    });
+    }, 500));
 
     $('.footer__date').html(new Date().getFullYear());
 });

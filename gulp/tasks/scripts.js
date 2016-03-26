@@ -42,9 +42,18 @@ gulp.task('scripts:bundle', function() {
       .pipe(connect.reload());
 });
 
+var files = [
+  './src/js/lodash.js',
+  './src/js/jquery.js',
+  './src/js/jquery-ui.js',
+  './src/js/jquery-ui.touch-punch.js',
+  './src/js/megaman.js'
+];
+
 gulp.task('scripts:concat', function() {
-  return gulp.src(paths.js.src)
+  return gulp.src(files)
       .pipe(concat('main.js'))
+      .pipe(_if(!flag.production, uglify()))
       .pipe(gulp.dest(paths.js.dest))
       .pipe(connect.reload());
 });
