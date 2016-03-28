@@ -53,7 +53,7 @@ var files = [
 gulp.task('scripts:concat', function() {
   return gulp.src(files)
       .pipe(concat('main.js'))
-      .pipe(_if(!flag.production, uglify()))
+      .pipe(_if(flag.production, uglify()))
       .pipe(gulp.dest(paths.js.dest))
       .pipe(connect.reload());
 });

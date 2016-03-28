@@ -16,6 +16,24 @@ body {
     //background: -ms-linear-gradient(top, $blue, $white);
 }
 
+h1, h2 { margin-bottom: 10px; }
+
+h1 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+h2 { font-size: 18px; }
+
+.text-white { color: $white; }
+
+.info {
+    position: relative;
+    top: -6em;
+    text-align: center;
+    z-index: 400;
+}
+
 header, footer { flex: none; }
 
 .header__container,
@@ -116,6 +134,10 @@ main {
     @include pan(15s);
 }
 
+.blink {
+    animation: blink 1.5s steps(2, start) infinite;
+}
+
 @keyframes pan {
     from { transform: translate3d(      0, 0, 0); }
     to   { transform: translate3d(-1000px, 0, 0); }
@@ -137,6 +159,12 @@ main {
 @keyframes idle {
     from { background-position: -140px 0;      }
     to   { background-position: -140px -700px; }
+}
+
+/* cursor blinking */
+@keyframes blink {
+    from { visibility: visible; }
+    to   { visibility: hidden;  }
 }
 
 #megaman {
