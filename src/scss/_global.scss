@@ -97,7 +97,7 @@ main {
 
 .clouds {
     flex: none;
-    background-image: url(../img/clouds@2x.png);
+    //background-image: url(../img/clouds@2x.png);
     height: 120px;
     @include pan(20s);
 }
@@ -112,7 +112,7 @@ main {
 .street, .front-lights { bottom: 0; }
 
 .street {
-    background-image: url(../img/street@2x.png);
+    //background-image: url(../img/street@2x.png);
     height: 282px;
     z-index: 200;
     @include pan(20s);
@@ -121,7 +121,7 @@ main {
 .bushes {
      bottom: 94px;
      height: 47px;
-     background-image: url(../img/bushes@2x.png);
+     //background-image: url(../img/bushes@2x.png);
      z-index: 100;
      @include pan(25s);
  }
@@ -129,7 +129,7 @@ main {
 .front-lights {
     height: 340px;
     z-index: 300;
-    background-image: url(../img/front-lights@2x.png);
+    //background-image: url(../img/front-lights@2x.png);
     pointer-events: none;
     @include pan(15s);
 }
@@ -169,8 +169,8 @@ main {
 
 #megaman {
     position: absolute;
-    background-image: url('../img/megaman-sprites@2x.png');
-    cursor: url('../img/cursor_grab_open.png') 23 23, auto;
+    //background-image: url('../img/megaman-sprites@2x.png');
+    //cursor: url('../img/cursor_grab_open.png') 23 23, auto;
     width: 140px;
     height: 140px;
     bottom: -110%;
@@ -184,7 +184,7 @@ main {
     &.falling { background-position: 700px -560px;        }
 
     &.grabbed {
-        cursor: url('../img/cursor_grab_closed.png') 23 23, auto;
+        //cursor: url('../img/cursor_grab_closed.png') 23 23, auto;
         background-position: 700px -420px;
     }
 }

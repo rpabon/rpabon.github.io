@@ -1,3 +1,8 @@
+var $ = require('jquery');
+// require('jqueryui');
+// require('./jquery-ui.touch-punch');
+// var _ = require('lodash');
+
 $(function() {
     var $window = $(window);
     var megaman = $('#megaman');
