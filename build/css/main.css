@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Ricardo Pabón</title>
-  <style>/* http://meyerweb.com/eric/tools/css/reset/
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -176,6 +171,7 @@ main {
   -webkit-flex: none;
       -ms-flex: none;
           flex: none;
+  background-image: url(/img/clouds@2x.png);
   height: 120px;
   -webkit-animation: pan 20s linear infinite;
           animation: pan 20s linear infinite; }
@@ -195,6 +191,7 @@ main {
   bottom: 0; }
 
 .street {
+  background-image: url(/img/street@2x.png);
   height: 282px;
   z-index: 200;
   -webkit-animation: pan 20s linear infinite;
@@ -203,6 +200,7 @@ main {
 .bushes {
   bottom: 94px;
   height: 47px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAAvBAMAAACCiP1GAAAAElBMVEUgQDggUEgocFhgmFCYwEgAAACl71s2AAAABnRSTlP//////wCzv6S/AAACK0lEQVR4Ae2ZiW3FMAxDtYJW0ApaISt0/1UagTF+/22pl4WQPR1X/SYf8C/KB3U6LQN920Uc+cwIvZUIfdvcyb2WGaE3EaFvcXwzDxNYkmg+M0JfXISO4+9yCwcb7+ZrmRH60iJ0HF9DFg48ROr1zAh9RRH65nF6EdGwYR5LM1KvZ0boq4nQPd5ccFPZBRMabiR+7BtOvPnMCH01EbpDuKOKLzg4jHiI2H8jM0In9HxtV593C/m4p5JrB3ZsNyhw22VG6ISer+3K824awnkvUsGFsevuDQrcXpkROqHna7vsvI8T4bmIDANmuKCih4Fxx6XWoMBtlRmhE3q+tsvNYyMsuMqhyz3TWIcU5uKiuttSBW73zAid0PO1XWrezcZllaE44/Xhx2/jXiy0UoHbPTNCJ/R8bZeZd2ygIpCv0utfrhcwvVCB2zwzQif0em03N4+dpOAj5n2RArd1ZoRO6PXabn5eDpnJU13vXc8vUeB2zYzQCb1e22Xncagw+UyGkaGJ2/+HArdnZoRO6O7F2i49j8XrpyBX9upVa97VnLpmRuiEbqrp2g71X3recMiXggX8bb1qzbuaVMvMCJ3Q8VZ+urZD/ZeenzMw/kWxaq27mlHTzE4OndAtJJKt7Ub9l503mRMOr1qqWsuuptQ1s1NDJ3SUcCLZ2m7Uf9n5KQOXO7pa1Vp2NYW8bWYnhk7oqthKCBOj/pufn5dO3L6+olJ2NcW8b2anhU7on3R0u5HBUN9jAAAAAElFTkSuQmCC);
   z-index: 100;
   -webkit-animation: pan 25s linear infinite;
           animation: pan 25s linear infinite; }
@@ -210,6 +208,7 @@ main {
 .front-lights {
   height: 340px;
   z-index: 300;
+  background-image: url(/img/front-lights@2x.png);
   pointer-events: none;
   -webkit-animation: pan 15s linear infinite;
           animation: pan 15s linear infinite; }
@@ -284,6 +283,8 @@ main {
 
 #megaman {
   position: absolute;
+  background-image: url(/img/megaman-sprites@2x.png);
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAjklEQVR4Ae3XVw6AMAwDUI7MwblD+e+0yFSwJf+mD8q8jNOEDQnRPqD7+dLVvGg00SNKgJO3LFoAsUWPJToYjTfiAIj2QRtAiqKJlg8k+ldowSOvMppobxzR0oXWrY0mGsDBP8/50USPxYYMwaD50UQvoole4ATQSmiiicbxY5HgUMkaRIeiJWl4o0P0mBftT/OZUoAvJAAAAABJRU5ErkJggg==) 23 23, auto;
   width: 140px;
   height: 140px;
   bottom: -110%;
@@ -303,65 +304,7 @@ main {
   #megaman.falling {
     background-position: 700px -560px; }
   #megaman.grabbed {
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAiklEQVR4Ae3YwRGEIBQE0Q15AzcHPP6ztkx9oKdqrvoUQPU3KeOThiM6A/pf78svQHQWTXCgfdGiQzgwv/No0eNR4xeQR4vmINEHoNmBRB+L5vNe9GZoDhW9BbpCoPxlS3R7dIVshVNuRKUBWjQ4AYD2Q4vmFwBwANoELRr80AHQ/mjRgYtsFdGVG2MeI64xRggpAAAAAElFTkSuQmCC) 23 23, auto;
     background-position: 700px -420px; }
-</style></head>
-  <body>
-  <script>/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
 
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
-/******/ 			return installedModules[moduleId].exports;
-
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			exports: {},
-/******/ 			id: moduleId,
-/******/ 			loaded: false
-/******/ 		};
-
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
-
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-
-
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(1);
-	// require('./megaman');
-
-
-/***/ },
-/* 1 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ }
-/******/ ]);</script></body>
-</html>
+/*# sourceMappingURL=main.css.map*/

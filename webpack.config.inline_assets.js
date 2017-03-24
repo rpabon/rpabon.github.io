@@ -12,7 +12,6 @@ module.exports = {
     },
     output: {
         path: path.resolve('./build/'),
-        publicPath: '/',
         filename: 'js/bundle.js'
     },
     plugins: [
@@ -21,14 +20,10 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery"
         }),
-        new webpack.SourceMapDevToolPlugin({
-            filename: '[file].map'
-        }),
-        new ExtractTextPlugin('css/[name].css'),
+        new ExtractTextPlugin('css/[name].css', { allChunks: true }),
         new HtmlWebpackPlugin({
             title: 'Ricardo Pabón',
-            template: 'pug/index.pug',
-            filename: '../index.html'
+            template: 'pug/index.pug'
         }),
         new BrowserSyncPlugin({
             server: {
@@ -44,7 +39,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('css?sourceMap!postcss!sass?sourceMap') //first sass, then css
+                loader: ExtractTextPlugin.extract('css!postcss!sass') //first sass, then css
             },
             {
                 test: /\.(jpe?g|png)$/,

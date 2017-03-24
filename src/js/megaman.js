@@ -1,7 +1,7 @@
 var $ = require('jquery');
-// require('jqueryui');
-// require('./jquery-ui.touch-punch');
-// var _ = require('lodash');
+var _ = require('lodash');
+require('./jquery-ui');
+require('./jquery-ui.touch-punch');
 
 $(function() {
     var $window = $(window);
